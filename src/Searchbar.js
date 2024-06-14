@@ -49,7 +49,7 @@ export const Searchbar = ({ setRecipes }) => {
   return (
     <StyledTextField
       default="chicken"
-      label="Szukaj przepisów"
+      label="Find recipes"
       onChange={handleChange}
       InputProps={{
         endAdornment: (

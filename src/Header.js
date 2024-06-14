@@ -30,7 +30,7 @@ export default function ButtonAppBar(props) {
             src={logo}
           />
           <StyledTypography variant="h6" component="div">
-            RECIPIE FINDER
+            RECIPE FINDER
           </StyledTypography>
         </Toolbar>
       </StyledAppBar>
