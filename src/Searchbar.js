@@ -6,7 +6,7 @@ import { styled } from "@mui/system";
 import React, { useState, useEffect, useCallback } from "react";
 
 const StyledTextField = styled(TextField)`
-  margin: 60px 20px 20px 20px;
+  margin: 60px 0px 20px 0px;
   width: 40vw;
 
   & .MuiOutlinedInput-root fieldset{
