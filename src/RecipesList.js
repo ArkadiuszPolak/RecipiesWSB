@@ -3,6 +3,11 @@ import { styled } from "@mui/system";
 
 const StyledCard = styled(Card)`
   height: 100%;
+  margin: 20px;
+
+  &.MuiPaper-root {
+    border-radius: 60px;
+  }
 `;
 
 export const RecipesList = ({ recipes }) => {
@@ -19,14 +24,14 @@ export const RecipesList = ({ recipes }) => {
             <CardMedia
               sx={{ height: 140 }}
               image={recipe.recipe.image}
-              title="green iguana"
+              title={recipe.recipe.label}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
                 {recipe.recipe.label}
               </Typography>
               {recipe.recipe.ingredientLines.map((ingredientLine) => (
-                <Typography gutterBottom variant="body2" component="div">
+                <Typography gutterBottom variant="body1" component="div">
                   {ingredientLine}
                 </Typography>
               ))}

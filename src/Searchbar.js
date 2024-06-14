@@ -32,7 +32,7 @@ export const Searchbar = ({ setRecipes }) => {
 
   const fetchRecipes = useCallback(async () => {
     const response = await fetch(
-      `https://api.edamam.com/api/recipes/v2?q=${query}&type=public`
+      `https://api.edamam.com/api/recipes/v2?q=${query}&type=public&app_id=2a87ca32&app_key=ea61eef6432637c67b3c7874683e2fa5`
     );
     const data = await response.json();
     setRecipes(data.hits);
@@ -48,6 +48,7 @@ export const Searchbar = ({ setRecipes }) => {
 
   return (
     <StyledTextField
+      default="chicken"
       label="Szukaj przepisów"
       onChange={handleChange}
       InputProps={{
