@@ -8,6 +8,23 @@ import React, { useState, useEffect, useCallback } from "react";
 const StyledTextField = styled(TextField)`
   margin: 20px 20px 20px 20px;
   width: 40vw;
+
+  & .MuiOutlinedInput-root fieldset{
+    border: 2px solid black;
+    }
+  
+  & .MuiFormLabel-root{
+    color: black;
+  }
+
+  & label.Mui-focused {
+    color: black;
+  }
+  & .MuiOutlinedInput-root {
+    &.Mui-focused fieldset {
+      border-color: black;
+    }
+  }
 `;
 
 export const Searchbar = ({ setRecipes }) => {
