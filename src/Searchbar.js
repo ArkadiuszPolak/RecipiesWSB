@@ -6,11 +6,8 @@ import { styled } from "@mui/system";
 import React, { useState, useEffect, useCallback } from "react";
 
 const StyledTextField = styled(TextField)`
-  margin: 20px 0 20px 0;
-`;
-
-const StyledInputAdornment = styled(InputAdornment)`
-
+  margin: 20px 20px 20px 20px;
+  width: 40vw;
 `;
 
 export const Searchbar = ({ setRecipes }) => {
@@ -45,7 +42,6 @@ export const Searchbar = ({ setRecipes }) => {
           </InputAdornment>
         ),
       }}
-      fullWidth
     />
   );
 };
