@@ -47,7 +47,7 @@ export const RecipesList = ({ recipes }) => {
                   <p>Dish Type: {recipe.recipe.dishType}</p>
               </Typography>
               <Typography>
-              <p>List of ingredients:</p>
+              <p><b>List of ingredients:</b></p>
               </Typography>
               {recipe.recipe.ingredientLines.map((ingredientLine) => (
                 <TypographyList gutterBottom variant="body1" component="div">
