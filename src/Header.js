@@ -3,19 +3,22 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+import styled from "@emotion/styled";
+
+const StyledAppBar = styled(AppBar)`
+  background-color: coral;
+`;
 
 export default function ButtonAppBar(props) {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: props.bgColor }}>
+      <StyledAppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            RECIPIE FINDER
           </Typography>
-          <Button color="inherit">Login</Button>
         </Toolbar>
-      </AppBar>
+      </StyledAppBar>
     </Box>
   );
 }

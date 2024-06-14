@@ -2,7 +2,16 @@ import { TextField } from "@mui/material";
 import { InputAdornment } from "@mui/material";
 import { IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import { styled } from "@mui/system";
 import React, { useState, useEffect, useCallback } from "react";
+
+const StyledTextField = styled(TextField)`
+  margin: 20px 0 20px 0;
+`;
+
+const StyledInputAdornment = styled(InputAdornment)`
+
+`;
 
 export const Searchbar = ({ setRecipes }) => {
   const [query, setQuery] = useState("chicken");
@@ -24,7 +33,7 @@ export const Searchbar = ({ setRecipes }) => {
   }
 
   return (
-    <TextField
+    <StyledTextField
       label="Szukaj przepisów"
       onChange={handleChange}
       InputProps={{
