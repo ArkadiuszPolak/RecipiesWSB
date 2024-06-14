@@ -10,6 +10,20 @@ const StyledCard = styled(Card)`
   }
 `;
 
+const TypographyLabel = styled(Typography)`
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 24px;
+`;
+
+const CardMediaStyled = styled(CardMedia)`
+  height: 200px;
+`;
+
+const TypographyList = styled(Typography)`
+  text-decoration: blink;
+`;
+
 export const RecipesList = ({ recipes }) => {
   return (
     <Grid
@@ -21,19 +35,24 @@ export const RecipesList = ({ recipes }) => {
       {recipes.map((recipe) => (
         <Grid item xs={12} md={6} lg={4}>
           <StyledCard>
-            <CardMedia
-              sx={{ height: 140 }}
+            <CardMediaStyled
               image={recipe.recipe.image}
               title={recipe.recipe.label}
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <TypographyLabel gutterBottom component="div">
                 {recipe.recipe.label}
+              </TypographyLabel>
+              <Typography gutterBottom variant="body1" component="div">
+                  <p>Dish Type: {recipe.recipe.dishType}</p>
+              </Typography>
+              <Typography>
+              <p>List of ingredients:</p>
               </Typography>
               {recipe.recipe.ingredientLines.map((ingredientLine) => (
-                <Typography gutterBottom variant="body1" component="div">
+                <TypographyList gutterBottom variant="body1" component="div">
                   {ingredientLine}
-                </Typography>
+                </TypographyList>
               ))}
             </CardContent>
           </StyledCard>
